@@ -1,0 +1,13 @@
+# 环境变量与本地数据
+.env
+data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 编辑器
+.vscode/
+.idea/
