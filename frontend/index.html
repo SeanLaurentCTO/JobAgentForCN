@@ -1,42 +1,16 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>职位链接收集</title>
-  <link rel="stylesheet" href="/style.css" />
-</head>
-<body>
-  <header class="topbar">
-    <h1>职位链接收集</h1>
-    <button id="logout-btn" class="link-btn" type="button">退出</button>
-  </header>
-
-  <main>
-    <section class="card">
-      <label for="url-input" class="label">把文章链接粘贴到下面</label>
-      <input
-        id="url-input"
-        class="text-input"
-        type="text"
-        inputmode="url"
-        autocomplete="off"
-        autocapitalize="off"
-        spellcheck="false"
-        placeholder="在这里粘贴链接"
-      />
-      <button id="submit-btn" class="primary-btn" type="button">提交</button>
-      <p id="message" class="message" role="status" aria-live="polite"></p>
-    </section>
-
-    <section class="card">
-      <h2>最近提交</h2>
-      <ul id="history" class="history">
-        <li class="empty">还没有提交记录</li>
-      </ul>
-    </section>
-  </main>
-
-  <script src="/app.js"></script>
-</body>
+<!doctype html>
+<html lang="<!-- figma:lang -->">
+  <head>
+    <!-- figma:head-start -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><!-- figma:title --></title>
+    <!-- figma:head-end -->
+  </head>
+  <body>
+    <!-- figma:body-start -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- figma:body-end -->
+  </body>
 </html>

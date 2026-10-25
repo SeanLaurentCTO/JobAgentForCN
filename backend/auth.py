@@ -3,7 +3,7 @@ import hmac
 
 from fastapi import HTTPException, Request
 
-from .config import APP_PASSWORD, SECRET_KEY
+from .config import AUTH_ENABLED, APP_PASSWORD, SECRET_KEY
 
 COOKIE_NAME = "ja_session"
 
@@ -17,6 +17,8 @@ def check_password(password: str) -> bool:
 
 
 def require_auth(request: Request) -> None:
+    if not AUTH_ENABLED:
+        return
     token = request.cookies.get(COOKIE_NAME)
     if not token or not hmac.compare_digest(token, make_token()):
         raise HTTPException(status_code=401, detail="请先登录")
